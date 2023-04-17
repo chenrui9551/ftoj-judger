@@ -79,7 +79,7 @@ int main(int argc, char *argv[]) {
     }
 
     if (max_memory->count > 0) {
-        _config.max_memory = (long) *max_memory->ival;
+        _config.max_memory = (long) *max_memory->ival * 1024; // KB to Byte
     } else {
         _config.max_memory = UNLIMITED;
     }
